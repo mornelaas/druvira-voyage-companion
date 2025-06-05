@@ -42,26 +42,30 @@ const Register = () => {
   const isFormValid = formData.name.trim() && formData.email.trim() && formData.password.length >= 6;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 font-inter flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 font-poppins flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center text-druvira-blue hover:text-druvira-blue/80 mb-6 transition-colors">
+          <Link to="/" className="inline-flex items-center text-druvira-orange hover:text-druvira-orange-light mb-6 transition-colors font-medium">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
           
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-druvira-blue to-druvira-gold rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">D</span>
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/44cefbf0-dfd5-4b29-ba32-9f949cb62bb0.png" 
+                alt="Druvira Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="text-3xl font-bold text-druvira-blue">Druvira</span>
+            <span className="text-3xl font-bold text-druvira-orange-dark">Druvira</span>
           </div>
           
-          <h1 className="text-2xl font-semibold text-druvira-blue mb-2">
+          <h1 className="text-2xl font-semibold text-druvira-orange-dark mb-2">
             Crea tu cuenta
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-medium">
             Comienza tu aventura con tu compañerIA de viaje
           </p>
         </div>
@@ -69,12 +73,12 @@ const Register = () => {
         {/* Form */}
         <Card className="shadow-xl border-0">
           <CardHeader className="space-y-1 pb-4">
-            <CardTitle className="text-center text-druvira-blue">Registro</CardTitle>
+            <CardTitle className="text-center text-druvira-orange-dark font-semibold">Registro</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-druvira-blue font-medium">
+                <Label htmlFor="name" className="text-druvira-orange-dark font-semibold">
                   Nombre completo
                 </Label>
                 <div className="relative">
@@ -86,14 +90,14 @@ const Register = () => {
                     placeholder="Tu nombre completo"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="pl-10 h-12 border-gray-200 focus:border-druvira-blue"
+                    className="pl-10 h-12 border-gray-200 focus:border-druvira-orange"
                     required
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-druvira-blue font-medium">
+                <Label htmlFor="email" className="text-druvira-orange-dark font-semibold">
                   Correo electrónico
                 </Label>
                 <div className="relative">
@@ -105,14 +109,14 @@ const Register = () => {
                     placeholder="tu@email.com"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="pl-10 h-12 border-gray-200 focus:border-druvira-blue"
+                    className="pl-10 h-12 border-gray-200 focus:border-druvira-orange"
                     required
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-druvira-blue font-medium">
+                <Label htmlFor="password" className="text-druvira-orange-dark font-semibold">
                   Contraseña
                 </Label>
                 <div className="relative">
@@ -124,7 +128,7 @@ const Register = () => {
                     placeholder="Mínimo 6 caracteres"
                     value={formData.password}
                     onChange={handleInputChange}
-                    className="pl-10 h-12 border-gray-200 focus:border-druvira-blue"
+                    className="pl-10 h-12 border-gray-200 focus:border-druvira-orange"
                     required
                     minLength={6}
                   />
@@ -133,7 +137,7 @@ const Register = () => {
 
               <Button
                 type="submit"
-                className="w-full h-12 bg-druvira-blue hover:bg-druvira-blue/90 text-white text-lg font-medium transition-all duration-300 hover:scale-105"
+                className="w-full h-12 bg-druvira-orange hover:bg-druvira-orange-light text-white text-lg font-semibold transition-all duration-300 hover:scale-105"
                 disabled={!isFormValid || isLoading}
               >
                 {isLoading ? "Creando cuenta..." : "Empezar con Druvira"}
@@ -141,7 +145,7 @@ const Register = () => {
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 font-medium">
                 Al crear una cuenta, aceptas nuestros términos de servicio y política de privacidad.
               </p>
             </div>

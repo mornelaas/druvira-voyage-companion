@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,12 +66,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Druvira custom colors
+				// Druvira custom colors - Updated to orange theme
 				druvira: {
-					blue: '#1E3A8A',
-					gold: '#FBBF24',
-					'blue-light': '#3B82F6',
-					'gold-light': '#FCD34D'
+					orange: '#FF7A2F',
+					'orange-light': '#FF944D',
+					'orange-dark': '#E6591A',
+					'orange-gradient': '#FF8C42'
 				}
 			},
 			borderRadius: {
