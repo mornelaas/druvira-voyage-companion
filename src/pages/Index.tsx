@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plane, MapPin, ShieldCheck, Sparkles } from "lucide-react";
@@ -92,10 +91,10 @@ const Index = () => {
                   <div className="mb-6 flex justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-druvira-orange-dark mb-4">
+                  <h3 className="text-xl font-semibold text-druvira-orange-dark mb-4 text-center">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 font-medium text-center">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -136,7 +135,7 @@ const Index = () => {
             <span className="text-xl font-bold text-druvira-orange-dark">Druvira</span>
           </div>
           <p className="text-gray-600 font-medium">
-            © 2024 Druvira. Tu compañerIA de viaje inteligente.
+            © 2025 Druvira. Tu compañerIA de viaje inteligente.
           </p>
         </div>
       </footer>
