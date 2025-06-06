@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plane, MapPin, ShieldCheck, Sparkles } from "lucide-react";
@@ -23,7 +24,8 @@ const Index = () => {
     {
       icon: <MapPin className="w-8 h-8 text-druvira-orange-dark" />,
       title: "Recomendaciones auténticas",
-      description: "Basadas en contexto y gustos personales"
+      description: "Basadas en contexto y gustos personales",
+      titleClass: "text-left"
     }
   ];
 
@@ -91,7 +93,7 @@ const Index = () => {
                   <div className="mb-6 flex justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-druvira-orange-dark mb-4 text-center">
+                  <h3 className={`text-xl font-semibold text-druvira-orange-dark mb-4 ${feature.titleClass || 'text-center'}`}>
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 font-medium text-center">
